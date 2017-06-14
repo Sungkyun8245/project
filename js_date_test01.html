@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+</head>
+<body>
+	<!-- 자바스크립트의 내장객체 : Date(날짜와 시간표현) -->
+	<script type="text/javascript">
+		today=new Date();
+		document.write(today);
+		str=today.getFullYear()+"년";
+		str=str+(today.getMonth()+1)+"월";
+		str=str+today.getDate()+"일";
+		day=today.getDay();
+		//getDay는 요일번호 일요일-0 토요일-6
+		document.write("<h2>"+str+":"+day+"</h2>");
+		//요일번호를 이용해서 str에 요일명을 구해서 연결하기 -switch문 이용하기
+		/* switch(day){
+		case 0 : day=day+"일요일"; break;
+		case 1 : day=day+"월요일"; break;
+		case 2 : day=day+"화요일"; break;
+		case 3 : day=day+"수요일"; break;
+		case 4 : day=day+"목요일"; break;
+		case 5 : day=day+"금요일"; break;
+		case 6 : day=day+"토요일"; break;
+		} */
+		
+		myarr=new Array("일요일","월요일","화요일","수요일","목요일","금요일","토요일");
+		document.write("실습)"+str+":"+myarr[day]);
+			
+		//document.write("<h2>"+str+":"+day+"</h2>");
+		myimg="2.PNG";
+		document.write("<img src='../images/do"+myimg+"'/>");
+		document.bgColor = "yellow";
+	</script>
+</body>
+</html>
